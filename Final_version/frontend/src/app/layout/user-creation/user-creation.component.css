@@ -1,0 +1,56 @@
+.register-user {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin: 0 auto;
+}
+
+.form-card {
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.card-content {
+  width: 80%;
+  height: 100%;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  width: 170px !important;
+  background-color: #3498db;
+  color: white !important;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

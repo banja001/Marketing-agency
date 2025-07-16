@@ -1,0 +1,38 @@
+.view {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .card-container {
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card {
+    display: flex;
+    height: 25%;
+    width: 75%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    padding: 10px;
+  }
+  
+  .card-description {
+    font-weight: lighter;
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }

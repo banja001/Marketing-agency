@@ -1,0 +1,18 @@
+<div class="view">
+    <div class="card-container" *ngFor="let r of requests">
+      <mat-card class="card">
+        <mat-card-content class="card-content">
+          <div class="card-description">Username: {{ r.username }}</div>
+          <div class="card-description" *ngIf="r.clientType === 'PHYSICAL_PERSON'">{{ r.name }} {{r.surname}}</div>
+          <div class="card-description" *ngIf="r.clientType === 'LEGAL_ENTITY'">{{ r.companyName }} - PIB: {{r.tin}}</div>
+          <div class="card-description">Phone: {{ r.phone }}</div>
+          <div class="card-description">Address: {{ r.address }}, {{ r.city }}, {{ r.country }}</div>
+          <div class="card-description">Service package: {{ r.servicePackage }}</div>
+          <button mat-raised-button color="primary" (click)="accept(r)">Accept & Send Mail</button>
+          <br>
+          <button mat-raised-button color="warn" (click)="block(r)">Block</button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  

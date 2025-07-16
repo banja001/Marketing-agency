@@ -1,0 +1,11 @@
+<div class="view">
+  <div class="card-container" *ngFor="let n of notifications">
+    <mat-card class="card">
+      <mat-card-content class="card-content">
+        <div class="card-description">Neko je probao da se uloguje: </div>
+        <div class="card-description">{{ n.message}}</div>
+        <div class="card-description">Vreme: {{ n.date}}</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

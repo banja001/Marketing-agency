@@ -1,0 +1,60 @@
+<div class="navbar">
+  <div class="navbar-right">
+    <div class="navbar-menu">
+      <div class="navbar-button-panel">
+        <div *ngIf="user && user.role === 'admin'">
+          <button class="navbar-button" (click)="registrationRequests()">
+            Registration requests
+          </button>
+          <button class="navbar-button" (click)="notifications()">
+            Notifications
+          </button>
+          <div class="dropdown">
+            <button class="navbar-button">Staff</button>
+            <div class="dropdown-content">
+              <button class="navbar-button" (click)="staff()">
+                Staff members
+              </button>
+              <button class="navbar-button" (click)="create()">
+                Create staff member
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">{{ user?.username }}</button>
+          <div
+            class="dropdown-content"
+            *ngIf="user?.id != 0; else loginRegisterButtons"
+          >
+            <button class="navbar-button" (click)="profile()">Profile</button>
+            <button
+              *ngIf="user?.role === 'client'"
+              class="navbar-button"
+              (click)="requestDataDeletion()"
+            >
+              Delete account
+            </button>
+            <button class="navbar-button" (click)="logout()">Logout</button>
+          </div>
+          <ng-template #loginRegisterButtons class="template">
+            <button
+              #loginRegisterButtons
+              class="navbar-button"
+              (click)="login()"
+            >
+              Login
+            </button>
+            <button
+              #loginRegisterButtons
+              class="navbar-button"
+              (click)="register()"
+            >
+              Register
+            </button>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

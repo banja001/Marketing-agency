@@ -1,0 +1,22 @@
+<div class="col-md-12">
+  <div class="card card-container">
+    <form [formGroup]="authForm">
+      <div class="form-group">
+        <label for="code"
+          >Enter the 6-digit code from your authenticator app</label
+        >
+        <mat-form-field class="login-input">
+          <input
+            matInput
+            type="text"
+            placeholder="6-digit code"
+            formControlName="code"
+          />
+        </mat-form-field>
+      </div>
+      <div class="login-button">
+        <button class="login-submit" (click)="login()">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

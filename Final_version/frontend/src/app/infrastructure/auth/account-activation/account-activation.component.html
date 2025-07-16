@@ -1,0 +1,10 @@
+<div class="verification-success-container" *ngIf="!this.error">
+    <mat-icon>check_circle</mat-icon>
+    <p>Your account has been successfully activated. You can now log in to your account using your credentials</p>
+  </div>
+  <div class="verification-success-container" *ngIf="this.error">
+    <mat-icon>cancel</mat-icon>
+    <h2>Activation unsuccesfull!</h2>
+    <p>Error occured when tried to verify.</p>
+  </div>
+  

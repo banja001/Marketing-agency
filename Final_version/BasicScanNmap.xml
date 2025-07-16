@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -p 8090 -A localhost" profile_name="" scanner="nmap" start="1718449595" startstr="Sat Jun 15 13:06:35 2024" version="7.95" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="1" services="8090"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.95 ( https://nmap.org ) at 2024-06-15 13:06 Central Europe Daylight Time
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00032s latency).
+Other addresses for localhost (not scanned): ::1
+rDNS record for 127.0.0.1: kubernetes.docker.internal
+
+PORT     STATE SERVICE  VERSION
+8090/tcp open  ssl/http Apache Tomcat (language: en)
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=server/organizationName=FTN/stateOrProvinceName=Vojvodina/countryName=SR
+| Subject Alternative Name: DNS:localhost
+| Not valid before: 2024-05-15T20:29:11
+|_Not valid after:  2025-05-15T20:29:11
+|_http-title: Site doesn't have a title (application/json).
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Microsoft Windows 10|11
+OS CPE: cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_11
+OS details: Microsoft Windows 10 1607 - 11 23H2
+Network Distance: 0 hops
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 28.00 seconds
+</output><host comment=""><status state="up"></status><address addr="127.0.0.1" vendor="" addrtype="ipv4"></address><hostnames><hostname name="localhost" type="user"></hostname><hostname name="kubernetes.docker.internal" type="PTR"></hostname></hostnames><ports><port portid="8090" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="http" product="Apache Tomcat" extrainfo="language: en"></service></port></ports><os><portused state="open" proto="tcp" portid="8090"></portused><portused state="closed" proto="udp" portid="34812"></portused><osmatch name="Microsoft Windows 10 1607 - 11 23H2" accuracy="100" line="74791"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="100"></osclass></osmatch></os><uptime seconds="15869" lastboot="Sat Jun 15 08:42:34 2024"></uptime><tcpsequence index="253" difficulty="Good luck!" values="837CB828,3D25E268,566562E5,911C40E1,BDF894BF,6CE208AD"></tcpsequence><ipidsequence class="Busy server or unknown class" values="631F,6331,634F,6369,6383,6395"></ipidsequence><tcptssequence class="1000HZ" values="F21691,F21701,F21771,F217E2,F21851,F218C1"></tcptssequence></host><runstats><finished time="1718449623" timestr="Sat Jun 15 13:07:03 2024"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>

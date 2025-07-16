@@ -1,0 +1,193 @@
+<div class="container">
+  <p>{{message.message}}</p>
+  <div class="left">
+    <div class="card">
+      <form class="example-form" [formGroup]="editProfileForm">
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Username"
+            [(ngModel)]="this.profile.username"
+            formControlName="username"
+            [readonly]="this.user?.role === 'client'"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="**********" readonly="true" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Name"
+            [(ngModel)]="this.profile.name"
+            formControlName="name"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Surname"
+            [(ngModel)]="this.profile.surname"
+            formControlName="surname"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Address"
+            [(ngModel)]="this.profile.address"
+            formControlName="address"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="City"
+            [(ngModel)]="this.profile.city"
+            formControlName="city"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Country"
+            [(ngModel)]="this.profile.country"
+            formControlName="country"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Phone"
+            [(ngModel)]="this.profile.phone"
+            formControlName="phone"
+          />
+        </mat-form-field>
+      </form>
+      <div class="buttons">
+        <button class="button" (click)="update()">Update</button>
+        <button class="button" (click)="changePassword()">
+          Change password
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="right" *ngIf="user && user.role === 'client'">
+    <div>
+      <div class="request-header">
+        <h2>List of commercials</h2>
+        <div class="button-container">
+          <button class="request-button" (click)="createCommercialRequest()">
+            Create commercial request
+          </button>
+        </div>
+      </div>
+      <div *ngIf="commercials.length === 0">No commercials... :(</div>
+      <div class="request-list">
+        <div class="request-card-container" *ngFor="let c of commercials">
+          <div class="request-card">
+            <div class="request-card-content">
+              <div class="request-card-details">
+                <div class="request-card-info">
+                  <h2 class="request-card-title">
+                    Commercial by company: {{ c.client.companyName }}
+                  </h2>
+                  <div class="request-card-subtitle">
+                    <h4>Moto: {{ c.moto }}</h4>
+                    <h4>Duration: {{ c.duration }} minutes</h4>
+                    <h4>Description: {{ c.description }}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right" *ngIf="user && user.role === 'employee'">
+    <div>
+      <div class="request-header">
+        <h2 *ngIf="!ifCommercials">List of requests</h2>
+        <h2 *ngIf="ifCommercials">List of commercials</h2>
+        <button
+          class="view-button"
+          *ngIf="ifCommercials"
+          (click)="viewRequests()"
+        >
+          View requests
+        </button>
+        <button
+          class="view-button"
+          *ngIf="!ifCommercials"
+          (click)="viewCommercials()"
+        >
+          View commercials
+        </button>
+      </div>
+      <p *ngIf="requests.length === 0 && !ifCommercials">
+        No pending requests... :(
+      </p>
+      <p *ngIf="commercials.length === 0 && ifCommercials">
+        No commercials... :(
+      </p>
+
+      <div class="request-list" *ngIf="!ifCommercials">
+        <div class="request-card-container" *ngFor="let c of requests">
+          <div class="request-card">
+            <div class="request-card-content">
+              <div class="request-card-details">
+                <div class="request-card-info">
+                  <h2 class="request-card-title">
+                    Request by: {{ c.client.username }}
+                  </h2>
+                  <div class="request-card-subtitle">
+                    <h4>Active: {{ c.activeFrom }} - {{ c.activeTo }}</h4>
+                    <h4>Company: {{ c.client.companyName }}</h4>
+                    <h4>Description: {{ c.description }}</h4>
+                  </div>
+                </div>
+                <div class="request-card-number">
+                  <div class="deadline">Deadline: {{ c.deadline }}</div>
+                  <button class="request-button" (click)="createCommercial(c)">
+                    Create commercial
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="request-list" *ngIf="ifCommercials">
+        <div class="request-card-container" *ngFor="let c of commercials">
+          <div class="request-card">
+            <div class="request-card-content">
+              <div class="request-card-details">
+                <div class="request-card-info">
+                  <h2 class="request-card-title">
+                    Commercial by company: {{ c.client.companyName }}
+                  </h2>
+                  <div class="request-card-subtitle">
+                    <h4>Moto: {{ c.moto }}</h4>
+                    <h4>Duration: {{ c.duration }} minutes</h4>
+                    <h4>Description: {{ c.description }}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="register-user">
+  <mat-card class="form-card">
+    <mat-card-title>Register new staff member</mat-card-title>
+    <mat-card-content class="card-content">
+      <form [formGroup]="userForm">
+        <div>
+          <div>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Name:</mat-label>
+              <input matInput placeholder="Name" formControlName="name" />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Surname:</mat-label>
+              <input matInput placeholder="Surname" formControlName="surname" />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Username:</mat-label>
+              <input
+                matInput
+                placeholder="Username"
+                formControlName="username"
+              />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Address:</mat-label>
+              <input matInput placeholder="Address" formControlName="address" />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>City:</mat-label>
+              <input matInput placeholder="City" formControlName="city" />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Country:</mat-label>
+              <input matInput placeholder="Country" formControlName="country" />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Phone:</mat-label>
+              <input
+                matInput
+                placeholder="Phone"
+                type="number"
+                formControlName="phone"
+              />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Role:</mat-label>
+              <mat-select formControlName="role" placeholder="Role">
+                <mat-option value="employee">Employee</mat-option>
+                <mat-option value="admin">Admin</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="button-container">
+          <button mat-button class="button" (click)="createUser()">
+            Create
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,31 @@
+<div class="card-container" *ngFor="let u of clientsAndEmployees">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-details">
+        <div>
+          <h1 class="card-title">{{ u.name }} {{ u.surname }}</h1>
+        </div>
+        <div class="card-number">
+          <div>Contact: {{ u.phone }}</div>
+          <span *ngIf="isClient(u)" class="client-label">CLIENT</span>
+          <span *ngIf="!isClient(u)" class="employee-label">EMPLOYEE</span>
+        </div>
+      </div>
+      <div class="card-info-button">
+        <div class="card-info">
+          {{ u.username }}, {{ u.address }}, {{ u.city }}, {{ u.country }}
+        </div>
+        <div class="card-button">
+          <button
+            *ngIf="!u.isBlockedUser"
+            mat-raised-button
+            color="warn"
+            (click)="block(u)"
+          >
+            Block
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Enter Reason for Blocking</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <textarea matInput placeholder="Reason" [(ngModel)]="reason" required></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close()">Cancel</button>
+  <button mat-button [disabled]="!reason" [mat-dialog-close]="reason">Block</button>
+</div>

@@ -1,0 +1,100 @@
+2024-06-15 23:24:32 | INFO  | c.e.m.MarketingAgencyManagementApplication | Starting MarketingAgencyManagementApplication using Java 17.0.9 with PID 9560 (E:\Bezbednost\KT2\backend\target\classes started by strah in E:\Bezbednost\KT2\backend)
+2024-06-15 23:24:32 | INFO  | c.e.m.MarketingAgencyManagementApplication | No active profile set, falling back to 1 default profile: "default"
+2024-06-15 23:24:32 | WARN  | c.o.s.b.o.e.OktaEnvironmentPostProcessorApplicationListener | Your Okta Issuer URL is missing. You can copy your domain from the Okta Developer Console. Follow these instructions to find it: https://bit.ly/finding-okta-domain
+To fix this add the `okta.oauth2.issuer` property to your application environments.
+2024-06-15 23:24:32 | INFO  | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor | Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-15 23:24:32 | INFO  | o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor | For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-15 23:24:33 | INFO  | o.s.d.r.c.RepositoryConfigurationDelegate | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-15 23:24:33 | INFO  | o.s.d.r.c.RepositoryConfigurationDelegate | Finished Spring Data repository scanning in 74 ms. Found 8 JPA repository interfaces.
+2024-06-15 23:24:33 | WARN  | o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-15 23:24:33 | INFO  | o.s.w.s.a.s.AnnotationActionEndpointMapping | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-06-15 23:24:34 | INFO  | o.s.b.w.e.tomcat.TomcatWebServer | Tomcat initialized with port 8090 (https)
+2024-06-15 23:24:34 | INFO  | o.a.coyote.http11.Http11NioProtocol | Initializing ProtocolHandler ["https-jsse-nio-8090"]
+2024-06-15 23:24:34 | INFO  | o.a.catalina.core.StandardService | Starting service [Tomcat]
+2024-06-15 23:24:34 | INFO  | o.a.catalina.core.StandardEngine | Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-15 23:24:34 | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] | Initializing Spring embedded WebApplicationContext
+2024-06-15 23:24:34 | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext | Root WebApplicationContext: initialization completed in 1876 ms
+2024-06-15 23:24:34 | INFO  | o.h.jpa.internal.util.LogHelper | HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-15 23:24:34 | INFO  | org.hibernate.Version | HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-15 23:24:34 | INFO  | o.h.c.i.RegionFactoryInitiator | HHH000026: Second-level cache disabled
+2024-06-15 23:24:35 | INFO  | o.s.o.j.p.SpringPersistenceUnitInfo | No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-15 23:24:35 | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Starting...
+2024-06-15 23:24:35 | INFO  | com.zaxxer.hikari.pool.HikariPool | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7263664c
+2024-06-15 23:24:35 | INFO  | com.zaxxer.hikari.HikariDataSource | HikariPool-1 - Start completed.
+2024-06-15 23:24:35 | WARN  | org.hibernate.orm.deprecation | HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-15 23:24:36 | INFO  | o.h.e.t.j.p.i.JtaPlatformInitiator | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | relation "clients" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | relation "commercials" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | relation "commercials" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | relation "employees" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | relation "permission_role" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | relation "permission_role" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | relation "requests" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | relation "user_role" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | relation "user_role" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | table "clients" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | table "commercials" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | table "employees" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | table "notifications" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | table "permission_role" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | table "permissions" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | table "requests" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | table "roles" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | table "user_role" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | table "users" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | sequence "comm_seq" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | sequence "not_seq" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | sequence "per_seq" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | sequence "req_seq" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | sequence "role_seq" does not exist, skipping
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | SQL Warning Code: 0, SQLState: 00000
+2024-06-15 23:24:36 | WARN  | o.h.e.jdbc.spi.SqlExceptionHelper | sequence "user_seq" does not exist, skipping
+2024-06-15 23:24:36 | INFO  | o.s.o.j.LocalContainerEntityManagerFactoryBean | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-15 23:24:37 | WARN  | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-15 23:24:37 | INFO  | o.s.s.web.DefaultSecurityFilterChain | Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@648d4aa4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@367ba064, org.springframework.security.web.context.SecurityContextHolderFilter@59b8a653, org.springframework.security.web.header.HeaderWriterFilter@2f18e66c, org.springframework.web.filter.CorsFilter@32d3978b, org.springframework.security.web.authentication.logout.LogoutFilter@1b503f54, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71b640c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@611be559, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59c7c213, org.springframework.security.web.session.SessionManagementFilter@386b083, org.springframework.security.web.access.ExceptionTranslationFilter@3f4ba2b1, org.springframework.security.web.access.intercept.AuthorizationFilter@2f05652d]
+2024-06-15 23:24:38 | INFO  | o.s.b.d.a.OptionalLiveReloadServer | LiveReload server is running on port 35729
+2024-06-15 23:24:38 | INFO  | o.a.coyote.http11.Http11NioProtocol | Starting ProtocolHandler ["https-jsse-nio-8090"]
+2024-06-15 23:24:38 | INFO  | o.a.t.u.net.NioEndpoint.certificate | Connector [https-jsse-nio-8090], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\strah\.keystore] using alias [my_server_alias] with trust store [null]
+2024-06-15 23:24:38 | INFO  | o.s.b.w.e.tomcat.TomcatWebServer | Tomcat started on port 8090 (https) with context path ''
+2024-06-15 23:24:38 | INFO  | c.e.m.MarketingAgencyManagementApplication | Started MarketingAgencyManagementApplication in 6.889 seconds (process running for 7.643)
+2024-06-15 23:24:50 | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-15 23:24:50 | INFO  | o.s.web.servlet.DispatcherServlet | Initializing Servlet 'dispatcherServlet'
+2024-06-15 23:24:50 | INFO  | o.s.web.servlet.DispatcherServlet | Completed initialization in 1 ms
+2024-06-15 23:24:50 | ERROR | c.e.m.security.AuthTokenFilter | TOKEN: 
+2024-06-15 23:24:50 | INFO  | c.e.m.security.AuthTokenFilter | Parsing JWT token...
+2024-06-15 23:24:50 | INFO  | c.e.m.security.AuthTokenFilter | Getting Authorization header from request...
+2024-06-15 23:24:50 | WARN  | c.e.m.security.AuthTokenFilter | Failed to find Bearer token in Authorization header!
+2024-06-15 23:24:50 | INFO  | c.e.m.security.AuthTokenFilter | Validating JWT token...
+2024-06-15 23:24:51 | INFO  | c.e.m.service.UserService | Neuspesno logovanje korisnika strahinja.banjanac@gmail.com, pogresna lozinka!
+2024-06-15 23:24:53 | INFO  | c.e.m.service.UserService | milosmilutinovicg@gmail.com je poslao mejl korisnku s mejlom strahinja.banjanac@gmail.com!
+2024-06-15 23:24:55 | ERROR | c.e.m.security.AuthTokenFilter | TOKEN: 
+2024-06-15 23:24:55 | INFO  | c.e.m.security.AuthTokenFilter | Parsing JWT token...
+2024-06-15 23:24:55 | INFO  | c.e.m.security.AuthTokenFilter | Getting Authorization header from request...
+2024-06-15 23:24:55 | WARN  | c.e.m.security.AuthTokenFilter | Failed to find Bearer token in Authorization header!
+2024-06-15 23:24:55 | INFO  | c.e.m.security.AuthTokenFilter | Validating JWT token...
+2024-06-15 23:24:55 | ERROR | c.e.m.service.UserService | Captcha greska, username: strahinja.banjanac@gmail.com!
+2024-06-15 23:24:56 | INFO  | c.e.m.service.UserService | milosmilutinovicg@gmail.com je poslao mejl korisnku s mejlom strahinja.banjanac@gmail.com!

@@ -1,0 +1,25 @@
+.verification-success-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .verification-success-container mat-icon {
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  
+  .verification-success-container h2 {
+    color: #333;
+  }
+  

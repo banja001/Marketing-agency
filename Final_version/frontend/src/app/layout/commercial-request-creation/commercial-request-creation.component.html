@@ -1,0 +1,86 @@
+<div class="register-request">
+  <mat-card class="form-card">
+    <mat-card-title>Register new request</mat-card-title>
+    <mat-card-content class="card-content">
+      <form [formGroup]="requestForm">
+        <div>
+          <div class="form-row">
+            <div class="form-field">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Deadline:</mat-label>
+                <input
+                  matInput
+                  [matDatepicker]="deadlineDatepicker"
+                  placeholder="Deadline"
+                  formControlName="deadline"
+                  [min]="minDate"
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="deadlineDatepicker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #deadlineDatepicker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Active from:</mat-label>
+                <input
+                  matInput
+                  [matDatepicker]="startDatepicker"
+                  placeholder="Active from"
+                  formControlName="activeFrom"
+                  [min]="minDate"
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="startDatepicker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #startDatepicker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Active to:</mat-label>
+                <input
+                  matInput
+                  [matDatepicker]="endDatepicker"
+                  placeholder="Active to"
+                  formControlName="activeTo"
+                  [min]="minDate"
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="endDatepicker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #endDatepicker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Description:</mat-label>
+              <input
+                matInput
+                placeholder="Description"
+                formControlName="description"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="button-container">
+          <button mat-button class="button" (click)="createRequest()">
+            Create
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
