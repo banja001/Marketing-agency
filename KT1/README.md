@@ -1,0 +1,1 @@
+# BezbednostKT1

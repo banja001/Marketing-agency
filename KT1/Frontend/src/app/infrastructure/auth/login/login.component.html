@@ -1,0 +1,29 @@
+<div class="login">
+  <form class="login-form" [formGroup]="loginForm">
+    <mat-form-field class="login-input">
+      <label class="input-label">Username:</label>
+      <input matInput type="text" formControlName="username" />
+    </mat-form-field>
+
+    <div class="password-field">
+      <mat-form-field class="login-input" >
+        <label class="input-label">Password:</label>
+        <input
+          matInput
+          [type]="isPasswordVisible ? 'text' : 'password'"
+          formControlName="password"
+        />
+      </mat-form-field>
+
+      <fa-icon
+        class="login-password-eye"
+        [icon]="isPasswordVisible ? faEyeSlash : faEye"
+        (click)="togglePasswordVisibility()"
+      ></fa-icon>
+    </div>
+
+    <div class="login-button">
+      <button class="login-submit" (click)="login()">Login</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="title">Create certificate:</div>
+  <div class="info">
+    <div class="label">Subject:</div>
+    <div class="value">{{ subject.name }} {{ subject.lastname }}</div>
+    <div class="value">Mail: {{ subject.email }}</div>
+    <div class="value">Organization: {{ subject.organization }}</div>
+    <div class="value">Country: {{ subject.country }}</div>
+  </div>
+  <div class="info">
+    <div class="label">Issuer:</div>
+    <div class="value">{{ issuer.name }} {{ issuer.lastname }}</div>
+    <div class="value">Mail: {{ issuer.email }}</div>
+    <div class="value">Organization: {{ issuer.organization }}</div>
+    <div class="value">Country: {{ issuer.country }}</div>
+  </div>
+  <form [formGroup]="keysForm">
+    <div class="form-field">
+      <mat-form-field class="input-field">
+        <label class="input-label">Public PKCS8 key:</label>
+        <input matInput formControlName="pubKey" />
+      </mat-form-field>
+    </div>
+    <div class="form-field">
+      <mat-form-field class="input-field">
+        <label class="input-label">Private PKCS8 key:</label>
+        <input matInput formControlName="privKey" />
+      </mat-form-field>
+    </div>
+  </form>
+  <button class="button" (click)="onCreate()">Create certificate</button>
+  <div *ngIf="pubKey">
+    <h3>Once you go to Certificate this will not be visible!</h3>
+    <p class="key">Your public key: {{ pubKey }}</p>
+    <br />
+    <p class="key">Your private key: {{ privKey }}</p>
+  </div>
+</div>

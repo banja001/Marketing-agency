@@ -1,0 +1,62 @@
+<div class="navbar">
+  <div class="navbar-right">
+    <div class="navbar-menu">
+      <div class="navbar-button-panel">
+        <button
+          class="navbar-button"
+          *ngIf="user && user.role === 'ADMIN'"
+          (click)="goToMyRoot()"
+        >
+          My root certificate
+        </button>
+        <button
+          class="navbar-button"
+          *ngIf="user && user.role === 'ADMIN'"
+          (click)="goToCertificates()"
+        >
+          Certificates
+        </button>
+        <button
+          class="navbar-button"
+          *ngIf="
+            user &&
+            (user.role === 'INTERMEDIARY_CA' || user.role === 'END_ENTITY')
+          "
+          (click)="goToCertificate()"
+        >
+          Certificate
+        </button>
+        <button
+          class="navbar-button"
+          *ngIf="
+            user &&
+            (user?.role === 'ADMIN' ||
+              user?.role === 'END_ENTITY' ||
+              user?.role === 'INTERMEDIARY_CA')
+          "
+          (click)="search()"
+        >
+          Search
+        </button>
+        <div class="dropdown">
+          <button class="dropbtn">{{ user?.username }}</button>
+          <div
+            class="dropdown-content"
+            *ngIf="user?.id != 0; else loginRegisterButtons"
+          >
+            <button class="navbar-button" (click)="logout()">Logout</button>
+          </div>
+          <ng-template #loginRegisterButtons class="template">
+            <button
+              #loginRegisterButtons
+              class="navbar-button"
+              (click)="login()"
+            >
+              Login
+            </button>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

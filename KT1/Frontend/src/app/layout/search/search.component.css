@@ -1,0 +1,43 @@
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+  position: relative;
+}
+
+.button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 20px;
+  width: 125px;
+}
+
+.form-field {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.title {
+  font-weight: bold;
+  color: #333;
+  font-size: large;
+}
+
+.input-field {
+  width: 100%;
+  flex: 1;
+}
+
+.input-field input {
+  height: 30px;
+  width: 200px;
+  border-width: 2px;
+  border-radius: 10px;
+}

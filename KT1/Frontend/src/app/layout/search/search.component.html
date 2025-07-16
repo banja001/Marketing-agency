@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="title">Search certificate by serial number:</div>
+  <form [formGroup]="searchForm" class="form-field">
+    <div class="input-field">
+      <input matInput formControlName="searchParam" />
+      <button class="button" (click)="onSearch($event)">Search</button>
+    </div>
+  </form>
+
+  <div *ngIf="isValid && isClicked">
+    <h3>Certificate is valid.</h3>
+  </div>
+  <div *ngIf="!isValid && isClicked">
+    <h3>Certificate is not valid.</h3>
+  </div>
+</div>

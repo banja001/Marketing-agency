@@ -1,0 +1,67 @@
+<div>
+  <table mat-table [dataSource]="certificates" class="mat-elevation-z8">
+    <ng-container matColumnDef="subjectName">
+      <th mat-header-cell *matHeaderCellDef>Subject</th>
+      <td mat-cell *matCellDef="let c">
+        {{ c.subject.name + " " + c.subject.lastname }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="issuerName">
+      <th mat-header-cell *matHeaderCellDef>Issuer</th>
+      <td mat-cell *matCellDef="let c">
+        {{ c.issuer.name + " " + c.issuer.lastname }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="startDate">
+      <th mat-header-cell *matHeaderCellDef>Start date</th>
+      <td mat-cell *matCellDef="let c">
+        {{ c.startDate | date : "yyyy-MM-dd HH:mm:ss" }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endDate">
+      <th mat-header-cell *matHeaderCellDef>End date</th>
+      <td mat-cell *matCellDef="let c">
+        {{ c.endDate | date : "yyyy-MM-dd HH:mm:ss" }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef>Type</th>
+      <td mat-cell *matCellDef="let c">
+        {{ c.type }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="publicKey" class="key">
+      <th mat-header-cell *matHeaderCellDef>Public key</th>
+      <td mat-cell *matCellDef="let c" [title]="c.publicKey">
+        {{ c.publicKey }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="isValid" class="is-valid">
+      <th mat-header-cell *matHeaderCellDef>Is valid</th>
+      <td mat-cell *matCellDef="let c">
+        {{ c.valid ? "True" : "False" }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="getCert">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let c">
+        <button *ngIf="c.valid" class="button" (click)="onRevoke(c)">
+          Revoke certificate
+        </button>
+        <button *ngIf="c.valid === false" class="button-disabled">
+          Revoked
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

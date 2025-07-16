@@ -1,0 +1,35 @@
+<div class="card" *ngIf="showCreateButton">
+  <button class="button" (click)="onCreateRoot()">Create root cert</button>
+  <div *ngIf="pubKey">
+    <h3>Once you refresh the page this will not be visible!</h3>
+    <p class="key">Your public key: {{ pubKey }}</p>
+    <br />
+    <p class="key">Your private key: {{ privKey }}</p>
+  </div>
+</div>
+<div *ngIf="!showCreateButton" class="card">
+  <div class="title">Certificate details:</div>
+  <div class="info">
+    <div class="label">Subject:</div>
+    <div class="value">{{ myCertificate.subject.name  }} {{ myCertificate.subject.lastname  }}</div>
+    <div class="value">Mail: {{ myCertificate.subject.email  }}</div>
+    <div class="value">Organization: {{ myCertificate.subject.organization  }}</div>
+    <div class="value">Country: {{ myCertificate.subject.country  }}</div>
+  </div>
+  <div class="info">
+    <div class="label">Issuer:</div>
+    <div class="value">{{ myCertificate.issuer.name  }} {{ myCertificate.issuer.lastname  }}</div>
+    <div class="value">Mail: {{ myCertificate.issuer.email  }}</div>
+    <div class="value">Organization: {{ myCertificate.issuer.organization  }}</div>
+    <div class="value">Country: {{ myCertificate.issuer.country  }}</div>
+  </div>
+  <div class="info">
+    <div class="label">Validity period:</div>
+    <div class="value">Start date: {{ myCertificate.startDate | date: 'yyyy-MM-dd HH:mm:ss'}}</div>
+    <div class="value">End date: {{ myCertificate.endDate | date: 'yyyy-MM-dd HH:mm:ss' }}</div>
+  </div>
+  <div class="info">
+    <div class="label">Public key:</div>
+    <div class="key">{{ myCertificate.publicKey }}</div>
+  </div>
+</div>
